@@ -17,3 +17,15 @@ print(sup_df.head(5))
 #Masking Type 2
 sup_df['Type 2'] = '*****'
 print(sup_df.head(5))
+
+#Applying a function
+
+#Define function
+def doubler(x):
+    return 2*x
+
+sup_df['Double Speed'] = sup_df['Speed'].apply(doubler)
+print(sup_df.head(5))
+
+sup_df['Trible Attack'] = sup_df['Attack'].apply(lambda x:x*3)
+print(sup_df.head(5))
