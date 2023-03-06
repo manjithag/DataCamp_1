@@ -34,7 +34,14 @@ print(sup_df.head(10))
 #sup_df['Leg'] = sup_df['Legendary'].apply(lambda s:s[0]+'ABC'+s[s.find('S'):])
 #print(sup_df.head(5))
 
-sup_df['Double Speed'].hist(bins=5)
-plt.show()
+##Plotting a histogram
+sup_df['Double Speed'].hist(bins=140)
+plt.xlabel('Double Speed')
+plt.ylabel('Frequency')
+plt.title('Histogram for Double Speed')
+#plt.show()
 
+##Generalization
+sup_df['Double Speed'] = sup_df['Double Speed'].apply(lambda x: 'x>=80' if x>=80 else 'x<80')
+print(sup_df.head(10))
 
