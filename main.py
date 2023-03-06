@@ -39,9 +39,23 @@ sup_df['Double Speed'].hist(bins=140)
 plt.xlabel('Double Speed')
 plt.ylabel('Frequency')
 plt.title('Histogram for Double Speed')
-#plt.show()
+plt.show()
 
 ##Generalization
-sup_df['Double Speed'] = sup_df['Double Speed'].apply(lambda x: 'x>=80' if x>=80 else 'x<80')
+sup_df['Double Speed'] = sup_df['Double Speed'].apply(lambda x: '>=80' if x>=80 else '<80')
 print(sup_df.head(10))
 
+##Bottom coding
+sup_df['Trible Attack'].hist(bins=140)
+plt.xlabel('Trible Attack')
+plt.ylabel('Frequency')
+plt.show()
+
+print(sup_df[sup_df['Trible Attack'] < 50])
+sup_df.loc[sup_df['Trible Attack'] < 50,'Trible Attack'] = 49
+print(sup_df[sup_df['Trible Attack'] < 50])
+
+sup_df['Trible Attack'].hist(bins=140)
+plt.xlabel('Trible Attack')
+plt.ylabel('Frequency')
+plt.show()
