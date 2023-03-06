@@ -1,5 +1,6 @@
 import pandas as pd
 from matplotlib import pyplot as plt
+
 df = pd.read_csv('pokemon_data.csv')
 print(df.head(5))
 
@@ -54,6 +55,16 @@ plt.show()
 print(sup_df[sup_df['Trible Attack'] < 50])
 sup_df.loc[sup_df['Trible Attack'] < 50,'Trible Attack'] = 49
 print(sup_df[sup_df['Trible Attack'] < 50])
+
+sup_df['Trible Attack'].hist(bins=140)
+plt.xlabel('Trible Attack')
+plt.ylabel('Frequency')
+plt.show()
+
+##Top Coding
+print(sup_df[sup_df['Trible Attack']>400])
+sup_df.loc[sup_df['Trible Attack'] > 400 , 'Trible Attack'] = 401
+print(sup_df[sup_df['Trible Attack']>400])
 
 sup_df['Trible Attack'].hist(bins=140)
 plt.xlabel('Trible Attack')
