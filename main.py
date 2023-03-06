@@ -20,8 +20,6 @@ print(sup_df.head(5))
 sup_df['Type 2'] = '*****'
 print(sup_df.head(5))
 
-
-
 ## Define function
 def doubler(x):
     return 2*x
@@ -71,3 +69,5 @@ sup_df['Trible Attack'].hist(bins=140)
 plt.xlabel('Trible Attack')
 plt.ylabel('Frequency')
 plt.show()
+
+sup_df.to_csv('Annonymised_data')
