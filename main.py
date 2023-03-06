@@ -34,6 +34,7 @@ print(sup_df.head(10))
 #sup_df['Leg'] = sup_df['Legendary'].apply(lambda s:s[0]+'ABC'+s[s.find('S'):])
 #print(sup_df.head(5))
 
-sup_df['Double Speed'].hist(bins=15)
+sup_df['Double Speed'].hist(bins=5)
+plt.show()
 
 
